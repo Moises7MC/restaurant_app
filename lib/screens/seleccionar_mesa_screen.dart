@@ -38,11 +38,11 @@ class _SeleccionarMesaScreenState extends State<SeleccionarMesaScreen> {
 
   Color getColorEstado(String estado) {
     switch (estado) {
-      case 'LIBRE':
+      case 'libre':
         return Colors.green;
-      case 'OCUPADA':
+      case 'ocupada':
         return Colors.red;
-      case 'RESERVADA':
+      case 'reservada':
         return Colors.orange;
       default:
         return Colors.grey;
@@ -95,7 +95,7 @@ class _SeleccionarMesaScreenState extends State<SeleccionarMesaScreen> {
                   itemCount: mesas.length,
                   itemBuilder: (context, index) {
                     final mesa = mesas[index];
-                    final estaLibre = mesa.estado == 'LIBRE';
+                    final estaLibre = mesa.estado == 'libre';
 
                     return Card(
                       elevation: 4,
